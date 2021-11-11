@@ -3,6 +3,7 @@ const links = document.querySelector('.links');
 const message = document.querySelector('.message');
 const removeMessage = document.querySelector('.remove-message');
 const welcomeTime = document.querySelector('.welcome-time');
+const colorInput = document.querySelector('.color-picker input');
 
 window.addEventListener('DOMContentLoaded', function () {
   // Set date
@@ -31,6 +32,17 @@ window.addEventListener('DOMContentLoaded', function () {
   }, 10000);
 });
 
+// navbar toggle
 navToggle.addEventListener('click', function () {
   links.classList.toggle('show-links');
+});
+
+// color picker
+colorInput.addEventListener('keyup', function (e) {
+  let value = e.target.value;
+  if (/^#(?:[0-9a-fA-F]{3}){1,2}$/.test(value)) {
+    document.body.style.backgroundColor = value;
+  } else {
+    document.body.style.backgroundColor = 'rgb(53, 51, 51)';
+  }
 });
