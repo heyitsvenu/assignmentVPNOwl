@@ -59,7 +59,7 @@ a {
 }
 
 .message h3 {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .message .remove-message {
@@ -79,6 +79,10 @@ a {
   z-index: 1;
 }
 
+.message .remove-message:hover {
+  background-color: var(--secondary-bg);
+}
+
 .show-message {
   display: grid;
 }
@@ -89,7 +93,6 @@ main {
 
 nav {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  position: fixed;
   width: 100%;
   background-color: var(--primary-bg);
 }
@@ -205,7 +208,7 @@ nav {
 
 /* Features */
 #features {
-  height: 100vh;
+  height: 100%;
   display: grid;
   place-items: center;
   border-top: #222 1px solid;
@@ -216,7 +219,7 @@ nav {
   width: 90vw;
   text-align: center;
   height: 100%;
-  padding: 4rem 0;
+  padding: 2rem 0 4rem 0;
 }
 
 #features .section-center h2 {
@@ -247,7 +250,34 @@ nav {
   font-size: 1.5rem;
 }
 
+footer {
+  /* height: 50px; */
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons a {
+  margin: 0 0.5rem;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.social-icons a:hover {
+  color: rgba(223, 185, 16, 0.85);
+}
+
 @media screen and (min-width: 800px) {
+  .message h3 {
+    font-size: 1.5rem;
+  }
+
   .nav-center {
     max-width: 1170px;
     margin: 0 auto;
