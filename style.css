@@ -48,6 +48,7 @@ a {
   display: none;
   place-items: center;
   z-index: 1;
+  transition: var(--transition);
 }
 
 .message::after {
@@ -88,6 +89,7 @@ a {
 
 .show-message {
   display: grid;
+  transition: var(--transition);
 }
 
 /* Color Picker */
@@ -211,7 +213,7 @@ nav {
   place-items: center;
   background-color: var(--secondary-bg);
   color: #000;
-  padding-top: 2rem;
+  padding: 2rem 0 2rem 0;
 }
 
 #about-us .section-center {
@@ -223,7 +225,7 @@ nav {
 
 #about-us .section-center h2 {
   font-size: 2.75rem;
-  margin: 4rem 0 4rem 0;
+  margin: 1rem 0 4rem 0;
   letter-spacing: 0.25rem;
 }
 
@@ -248,7 +250,7 @@ nav {
 
 #features .section-center h2 {
   font-size: 2.75rem;
-  margin: 4rem 0 4rem 0;
+  margin: 1rem 0 4rem 0;
   letter-spacing: 0.25rem;
 }
 
@@ -294,7 +296,7 @@ nav {
 
 #gallery .section-center h2 {
   font-size: 2.75rem;
-  margin: 4rem 0 4rem 0;
+  margin: 1rem 0 4rem 0;
   letter-spacing: 0.25rem;
 }
 
@@ -384,9 +386,10 @@ nav {
 
 /* Contact Us */
 #contact-us {
-  height: 100vh;
+  height: 100%;
   display: grid;
   place-items: center;
+  margin-bottom: 10rem;
 }
 
 #contact-us .section-center {
@@ -434,25 +437,33 @@ nav {
 .contact-form input,
 .contact-form textarea {
   display: block;
-  width: 80%;
-  height: 1.75rem;
+  width: 100%;
   font-size: 1rem;
   margin: 1rem 0 1rem 0;
+  padding: 0.6rem;
   border: none;
+  border-radius: 5px;
   outline: 1px solid var(--primary-bg);
 }
 
 .contact-form textarea {
-  height: 4rem;
+  height: 5rem;
 }
 
-.contact-form input[type='submit'] {
+.contact-form button {
   background-color: var(--primary-color);
   color: #000;
   font-weight: bold;
-  margin-top: 1.5rem;
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  margin: 1rem 0 1rem 0;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  outline: 1px solid var(--primary-bg);
 }
-.contact-form input[type='submit']:hover {
+.contact-form button:hover {
   background-color: var(--secondary-bg);
   cursor: pointer;
 }
@@ -533,5 +544,11 @@ footer {
 
   .contact-form {
     padding-left: 2rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    width: 80%;
   }
 }

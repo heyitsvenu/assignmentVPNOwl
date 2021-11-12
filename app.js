@@ -36,6 +36,7 @@ const message = document.querySelector('.message');
 const removeMessage = document.querySelector('.remove-message');
 const welcomeTime = document.querySelector('.welcome-time');
 const colorInput = document.querySelector('.color-picker input');
+const submit = document.querySelector('.submit');
 
 // reviews items
 const img = document.querySelector('.person-img');
@@ -80,6 +81,17 @@ window.addEventListener('DOMContentLoaded', function () {
   showPerson(currentItem);
 });
 
+// Make message disappear when user scrolls
+function messageDisapper() {
+  let scrollHeight = window.scrollY;
+  if (scrollHeight >= 500) {
+    message.style.position = 'absolute';
+  } else if (scrollHeight < 500) {
+    message.style.position = 'fixed';
+  }
+}
+window.addEventListener('scroll', messageDisapper);
+
 // navbar toggle
 navToggle.addEventListener('click', function () {
   links.classList.toggle('show-links');
@@ -114,3 +126,5 @@ prevBtn.addEventListener('click', function () {
   if (currentItem < 0) currentItem = reviews.length - 1;
   showPerson(currentItem);
 });
+
+submit.addEventListener('click', (e) => e.preventDefault());
