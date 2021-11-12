@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap');
+
 /* root styles */
 :root {
   --primary-color: rgb(223, 185, 16);
@@ -52,7 +54,7 @@ a {
   content: '';
   width: 32px;
   height: 32px;
-  background-color: #000;
+  background-color: var(--primary-bg);
   border-radius: 50%;
   position: absolute;
   top: -10px;
@@ -242,7 +244,7 @@ nav {
   width: 90vw;
   text-align: center;
   height: 100%;
-  padding: 2rem 0 4rem 0;
+  padding: 2rem 0 0 0;
 }
 
 #features .section-center h2 {
@@ -273,6 +275,110 @@ nav {
   font-size: 1.5rem;
 }
 
+/* gallery */
+#gallery {
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+#gallery .section-center {
+  width: 90vw;
+  text-align: center;
+  height: 100%;
+  padding: 2rem 0 0 0;
+}
+
+#gallery .section-center h2 {
+  font-size: 2.75rem;
+  margin: 4rem 0 4rem 0;
+  letter-spacing: 0.25rem;
+}
+
+#gallery .images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  grid-gap: 1rem;
+}
+
+#gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* reviews */
+#reviews {
+  height: 80vh;
+  display: grid;
+  place-items: center;
+}
+
+#reviews .section-center {
+  width: 80vw;
+  max-width: 620px;
+  text-align: center;
+}
+
+#reviews .section-center h2 {
+  font-size: 2.75rem;
+  margin: 4rem 0 4rem 0;
+  letter-spacing: 0.25rem;
+}
+
+.review {
+  background: var(--primary-color);
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--transition);
+  transition: var(--transition);
+  text-align: center;
+  color: #000;
+}
+
+.img-container {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+
+.person-img {
+  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.author {
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+.job {
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.info {
+  margin-bottom: 0.75rem;
+}
+.prev-btn,
+.next-btn {
+  font-size: 1.5rem;
+  background: transparent;
+  border-color: transparent;
+  margin: 0 0.5rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.prev-btn:hover,
+.next-btn:hover {
+  color: #333;
+}
+
+/* footer */
 footer {
   display: flex;
   justify-content: flex-start;
