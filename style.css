@@ -147,7 +147,6 @@ nav {
 .logo {
   height: 2.9rem;
   width: 14.3rem;
-  /* text-align: center; */
   font-size: 2rem;
 }
 
@@ -275,6 +274,10 @@ nav {
   font-size: 1.5rem;
 }
 
+#features .list p {
+  font-size: 1rem;
+}
+
 /* gallery */
 #gallery {
   height: 100%;
@@ -309,7 +312,7 @@ nav {
 
 /* reviews */
 #reviews {
-  height: 80vh;
+  height: 100%;
   display: grid;
   place-items: center;
 }
@@ -354,15 +357,16 @@ nav {
 
 .author {
   margin-bottom: 0.25rem;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 .job {
   margin-bottom: 0.5rem;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 .info {
   margin-bottom: 0.75rem;
+  font-size: 1rem;
 }
 .prev-btn,
 .next-btn {
@@ -378,6 +382,81 @@ nav {
   color: #333;
 }
 
+/* Contact Us */
+#contact-us {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+#contact-us .section-center {
+  width: 80vw;
+  text-align: center;
+  height: 100%;
+  padding: 2rem 0 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 25% 25% 1fr;
+  grid-template-areas:
+    'heading'
+    'address'
+    'form';
+}
+
+#contact-us .section-center h2 {
+  grid-area: heading;
+  font-size: 2.75rem;
+  margin: 0 0 0 0;
+  letter-spacing: 0.25rem;
+  align-self: center;
+}
+
+.address {
+  grid-area: address;
+  text-align: left;
+}
+.address h4 {
+  font-size: 1.4rem;
+  padding-bottom: 0.5rem;
+}
+.address {
+  font-size: 1rem;
+}
+
+.contact-form {
+  grid-area: form;
+  text-align: left;
+}
+.contact-form label {
+  font-size: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  display: block;
+  width: 80%;
+  height: 1.75rem;
+  font-size: 1rem;
+  margin: 1rem 0 1rem 0;
+  border: none;
+  outline: 1px solid var(--primary-bg);
+}
+
+.contact-form textarea {
+  height: 4rem;
+}
+
+.contact-form input[type='submit'] {
+  background-color: var(--primary-color);
+  color: #000;
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+.contact-form input[type='submit']:hover {
+  background-color: var(--secondary-bg);
+  cursor: pointer;
+}
+
 /* footer */
 footer {
   display: flex;
@@ -385,6 +464,7 @@ footer {
   box-shadow: var(--boxshadow);
   font-size: 1rem;
   padding: 0.5rem 2rem;
+  margin-top: 3rem;
 }
 
 .social-icons {
@@ -441,5 +521,17 @@ footer {
   .links a {
     padding: 0;
     margin: 0 0.5rem;
+  }
+
+  #contact-us .section-center {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      'heading heading'
+      'address form';
+  }
+
+  .contact-form {
+    padding-left: 2rem;
   }
 }
